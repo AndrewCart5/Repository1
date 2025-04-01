@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/three@0.159.0/build/three.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-menu" id="gameMenu">
+            <h1>Select a Game</h1>
+            <div class="game-options">
+                <button class="game-button" id="typingGame">Word Flight</button>
+                <button class="game-button" id="boatGame">Boat Adventure</button>
+                <button class="game-button" id="minecraftGame">Block Builder</button>
+                <button class="game-button" id="cityGuesser">City Guesser</button>
+            </div>
+        </div>
+        
+        <div class="game-ui" id="gameUI" style="display: none;">
+            <div class="score-container">
+                <span>Score: </span>
+                <span id="score">0</span>
+            </div>
+            <div class="lives-container">
+                <span>Lives: </span>
+                <span id="lives">3</span>
+            </div>
+            <div class="level-container">
+                <span>Level: </span>
+                <span id="level">1</span>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+            <canvas id="webglCanvas" style="display: none;"></canvas>
+            <div class="game-over" id="gameOver">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <button id="restartButton">Play Again</button>
+            </div>
+            <button class="menu-button" id="menuButton">Back to Menu</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+    <script src="typingGame.js"></script>
+    <script src="boatGame.js"></script>
+    <script src="minecraftGame.js"></script>
+    <script src="cityGuesser.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html> 
